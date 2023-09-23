@@ -5,12 +5,12 @@ import time
 import pandas as pd
 
 # Create a function for Speech Trancription
-# def transcribe_speech():
-#     # Initialize recognizer class
-#     # r = sr.Recognizer()
+def transcribe_speech():
+    # Initialize recognizer class
+    r = sr.Recognizer()
 
     # Reading Microphone as source
-with sr.Microphone() as source:
+    with sr.Microphone() as source:
 
         # create a streamlit spinner that shows progress
         with st.spinner(text='Silence pls, Caliberating background noise.....'):
@@ -45,7 +45,7 @@ def main():
 
     # add a button to trigger speech recognition
     if st.button("Start Recording"):
-        # your_words_in_text = transcribe_speech()
+        your_words_in_text = transcribe_speech()
         st.write("Transcription: ", your_words_in_text)
-# if __name__ == "__main__":
-#     # main()
+if __name__ == "__main__":
+    main()
